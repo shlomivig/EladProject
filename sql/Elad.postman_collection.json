@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "d20b2464-e0d4-4dd0-a99c-4d1c1d57d4ae",
+		"name": "Elad",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17912185",
+		"_collection_link": "https://bold-astronaut-912346.postman.co/workspace/New-Team-Workspace~38599f72-2458-49bc-a3e1-4bc95d7c8420/collection/17912185-d20b2464-e0d4-4dd0-a99c-4d1c1d57d4ae?action=share&source=collection_link&creator=17912185"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "C10C61C9-0ABF-4CE3-9B92-550B6ED685A1",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"action\": \"Login\",\r\n    \"params\" : {\r\n        \"username\" : \"emily.davis@example.com\",\r\n        \"password\" : \"password123\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Run",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Run"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCategories",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "C10C61C9-0ABF-4CE3-9B92-550B6ED685A1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"action\": \"GetCategories\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Run",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Run"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "C10C61C9-0ABF-4CE3-9B92-550B6ED685A1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProducts",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "C10C61C9-0ABF-4CE3-9B92-550B6ED685A1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"action\": \"GetProducts\",\r\n    \"params\": {\r\n        \"categoryId\" : \"2\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Run?token=244A0FB6-BBC7-45D6-8655-05D2062DB26A",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Run"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "244A0FB6-BBC7-45D6-8655-05D2062DB26A"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddProductToCart",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "C10C61C9-0ABF-4CE3-9B92-550B6ED685A1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"action\": \"AddProductToCart\",\r\n    \"params\": {\r\n        \"cartId\" : \"1\",\r\n        \"productId\" : \"2\",\r\n        \"amount\" : \"1\"\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Run",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Run"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "244A0FB6-BBC7-45D6-8655-05D2062DB26A",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeProductAmountInCart",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "C10C61C9-0ABF-4CE3-9B92-550B6ED685A1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"action\": \"ChangeProductAmountInCart\",\r\n    \"params\": {\r\n        \"cartId\" : \"1\",\r\n        \"productId\" : \"2\",\r\n        \"amount\" : \"2\"\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Run?token=244A0FB6-BBC7-45D6-8655-05D2062DB26A",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Run"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "244A0FB6-BBC7-45D6-8655-05D2062DB26A"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProductFromCart",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "C10C61C9-0ABF-4CE3-9B92-550B6ED685A1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"action\": \"DeleteProductFromCart\",\r\n    \"params\": {\r\n        \"cartId\" : \"1\",\r\n        \"productId\" : \"2\"\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/Run?token=244A0FB6-BBC7-45D6-8655-05D2062DB26A",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Run"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "244A0FB6-BBC7-45D6-8655-05D2062DB26A"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
